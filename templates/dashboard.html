@@ -1,0 +1,20 @@
+<h2>Dashboard</h2>
+
+{% if role == 'admin' %}
+<form method="post">
+  <input name="title" placeholder="Task title">
+  <input name="assigned" placeholder="Assign to">
+  <button>Add Task</button>
+</form>
+{% endif %}
+
+<ul>
+{% for task in tasks %}
+  <li>
+    {{task[1]}} - {{task[2]}} - {{task[3]}}
+    <a href="/update/{{task[0]}}">Complete</a>
+  </li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
