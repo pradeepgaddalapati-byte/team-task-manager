@@ -98,7 +98,9 @@ def logout():
     return redirect('/')
 
 
+# 🔥 DB create cheyadaniki (VERY IMPORTANT)
+init_db()
 
-if __name__ == "__main__":
-    init_db()
-    app.run(debug=True)
+
+
+
